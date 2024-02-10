@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{enumitem}
+
+\title{GitTutorial}
+\author{Runpeng Li}
+\date{February 2024}
+
+\begin{document}
+\maketitle
+
+\section*{Git Basics: A Practical Guide for Beginners}
+
+Git is a distributed version control system that helps you track changes to your codebase. By the end of this tutorial, your students will be well-equipped to use Git for their semester-long projects.
+
+\subsection*{1. What is Git?}
+Git allows collaboration, keeps your project history organized, and facilitates seamless teamwork.
+
+\subsection*{2. Installation and Configuration}
+\begin{itemize}
+    \item Install Git: Download it from the official website or use package managers like Homebrew (for macOS) or Chocolatey (for Windows).
+    \item Configure Git: Set up your name and email using the following commands:
+    \begin{verbatim}
+    git config --global user.name "Your Name"
+    git config --global user.email "your@email.com"
+    \end{verbatim}
+\end{itemize}
+
+\subsection*{3. Creating a Repository}
+\begin{itemize}
+    \item Initialize a New Repository: Navigate to your project folder and run:
+    \begin{verbatim}
+    git init
+    \end{verbatim}
+    \item Cloning an Existing Repository: Use:
+    \begin{verbatim}
+    git clone <repository_url>
+    \end{verbatim}
+\end{itemize}
+
+\subsection*{4. Basic Workflow}
+\begin{itemize}
+    \item Adding Changes: Add files to the staging area before committing them:
+    \begin{verbatim}
+    git add <file1> <file2>
+    \end{verbatim}
+    \item Committing Changes: Commit your staged changes with a descriptive message:
+    \begin{verbatim}
+    git commit -m "Add feature X"
+    \end{verbatim}
+    \item Pushing and Pulling: Push local commits to the remote repository:
+    \begin{verbatim}
+    git push origin <branch_name>
+    \end{verbatim}
+    Pull changes from the remote repository:
+    \begin{verbatim}
+    git pull origin <branch_name>
+    \end{verbatim}
+\end{itemize}
+
+\subsection*{5. Branches and Merging}
+\begin{itemize}
+    \item Creating a Branch: Create a new branch for a feature or bug fix:
+    \begin{verbatim}
+    git checkout -b feature/my-feature
+    \end{verbatim}
+    \item Switching Branches: Move between branches:
+    \begin{verbatim}
+    git checkout <branch_name>
+    \end{verbatim}
+    \item Merging Branches: Merge changes from one branch into another:
+    \begin{verbatim}
+    git merge <source_branch>
+    \end{verbatim}
+    \item Handling Conflicts: Resolve conflicts manually and commit the changes.
+\end{itemize}
+
+\subsection*{6. Stashing}
+\begin{itemize}
+    \item Stash Changes: Temporarily save uncommitted changes:
+    \begin{verbatim}
+    git stash save "Work in progress"
+    \end{verbatim}
+    \item Apply Stash: Retrieve stashed changes:
+    \begin{verbatim}
+    git stash apply
+    \end{verbatim}
+\end{itemize}
+
+\subsection*{7. Additional Resources}
+\begin{itemize}
+    \item GitHub: Explore GitHub for collaborative development and hosting repositories.
+    \item Practice: Create a sample project, experiment with branches, and practice merging.
+\end{itemize}
+
+Remember, Git is a powerful tool, and practice makes perfect. Happy coding!
+
+\end{document}
