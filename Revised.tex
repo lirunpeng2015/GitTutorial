@@ -1,0 +1,127 @@
+\documentclass[10pt,twocolumn]{article}
+\usepackage{oxycomps}
+\newcommand{\fixme}[2][]{#2}
+\renewcommand{\fixme}[2][]{\textcolor{red}{#2}}
+\bibliography{references}
+\pdfinfo{
+    /Title (Git Tutorial)
+    /Author (Runpeng Li)
+}
+\title{Tutorial Report}
+\author{Runpeng Li}
+\affiliation{Occidental College}
+\email{rli3@oxy.edu}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction to Git}
+
+Git is a distributed version control system essential for developers. It helps track changes in your code, allowing multiple people to work together on the same project efficiently. Version control systems like Git are fundamental in software development because they help manage different versions of project files and allow you to revert to earlier versions if needed.
+
+\section{What is Git?}
+
+Git is not just a tool but a solution to common problems in collaborative coding projects. It ensures that the history of your project is well-organized and accessible, enabling seamless teamwork. Using Git, you can track each change made to the code, who made it, and why. This clarity helps prevent conflicts and eases the process of integrating different parts of a project.
+
+\subsection{Installation and Configuration}
+
+Install Git: Download and install Git from the official website or use package managers like Homebrew (for macOS) or Chocolatey (for Windows).
+
+Configure Git: Set up your identity with Git using the following commands:
+
+\begin{verbatim}
+git config --global user.name "Your Name"
+git config --global user.email "@email.com"
+\end{verbatim}
+
+\subsection{Creating a Repository}
+
+A repository or "repo" is where your project's files and their history are stored.
+
+Initialize a New Repository: To start tracking a new project with Git, navigate to your project folder and run:
+
+\begin{verbatim}
+git init
+\end{verbatim}
+
+Cloning an Existing Repository: To work on an existing project, clone it using:
+
+\begin{verbatim}
+git clone <repository_url>
+\end{verbatim}
+
+\subsection{Basic Workflow}
+
+Understanding the Git workflow is key to managing your code effectively.
+
+Adding Changes: Use the following command to select changes you want to commit:
+
+\begin{verbatim}
+git add <file1> <file2>
+\end{verbatim}
+
+Committing Changes: Save your changes with a meaningful message using:
+
+\begin{verbatim}
+git commit -m "Add feature X"
+\end{verbatim}
+
+Pushing and Pulling: Share your commits with the remote repository and update your local repository using:
+
+\begin{verbatim}
+git push origin <branch_name>
+git pull origin <branch_name>
+\end{verbatim}
+
+\section{Branches and Merging}
+
+Branches allow you to work on different versions of your project simultaneously.
+
+Creating a Branch: Start a new feature or fix a bug without affecting the main project using:
+
+\begin{verbatim}
+git checkout -b feature/my-feature
+\end{verbatim}
+
+Switching Branches: Switch your working branch with:
+
+\begin{verbatim}
+git checkout <branch_name>
+\end{verbatim}
+
+Merging Branches: Combine changes from one branch to another with:
+
+\begin{verbatim}
+git merge <source_branch>
+\end{verbatim}
+
+Handling Conflicts: Sometimes merging can cause conflicts. Resolve these manually, then commit the resolved changes.
+
+\section{Stashing}
+
+Stashing is useful for saving your uncommitted changes temporarily without committing them to the branch.
+
+Stash Changes: Save your uncommitted changes temporarily with:
+
+\begin{verbatim}
+git stash save "Work in progress"
+\end{verbatim}
+
+Apply Stash: Retrieve your stashed changes with:
+
+\begin{verbatim}
+git stash apply
+\end{verbatim}
+
+\subsection{Additional Resources}
+
+GitHub: Explore GitHub for hosting your repositories and collaborating with others. Practice: Create a sample project, experiment with branches, and practice merging to gain confidence and proficiency.
+
+\section{Tips and Advice}
+
+With this guide, beginners can understand the purpose and basic operations of Git, setting a strong foundation for more advanced practices in version control and collaborative software development.
+
+\printbibliography
+
+\end{document}
